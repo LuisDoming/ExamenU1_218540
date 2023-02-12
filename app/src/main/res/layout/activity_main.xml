@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    android:backgroundTint="@android:color/holo_blue_light"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginBottom="49dp"
+        android:text="C°"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="20dp"
+        android:text="K°"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="50dp"
+        android:text="F°"
+        android:textSize="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="376dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="45dp"
+        android:background="@color/black"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="Conversor de grados"
+        android:textColor="@color/white"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txCelsius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="41dp"
+        android:hint="(xx.xx)"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/txFar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="40dp"
+        android:hint="(xx.xx)"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/txCelsius" />
+
+    <EditText
+        android:id="@+id/txKelvin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="38dp"
+        android:hint="(xx.xx)"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/txFar" />
+
+    <Button
+        android:id="@+id/btnCelsius"
+        android:layout_width="98dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="56dp"
+        android:backgroundTint="@android:color/system_accent2_600"
+        android:text="°C"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLimpiar"
+        app:layout_constraintEnd_toStartOf="@+id/btKelvin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/btKelvin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="59dp"
+        android:background="@android:color/system_accent2_600"
+        android:text="°K"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLimpiar"
+        app:layout_constraintEnd_toStartOf="@+id/btnFar"
+        app:layout_constraintStart_toEndOf="@+id/btnCelsius"
+        app:layout_constraintTop_toBottomOf="@+id/txKelvin" />
+
+    <Button
+        android:id="@+id/btnFar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="59dp"
+        android:background="@android:color/system_accent2_600"
+        android:text="°F"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLimpiar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btKelvin"
+        app:layout_constraintTop_toBottomOf="@+id/txKelvin" />
+
+    <Button
+        android:id="@+id/btnLimpiar"
+        android:layout_width="334dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="50dp"
+        android:background="@android:color/system_accent2_600"
+        android:text="Limpiar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCelsius" />
+</android.support.constraint.ConstraintLayout>
